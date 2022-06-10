@@ -1,7 +1,7 @@
 version: '3'
 
 networks:
-  microservices:
+  account-service:
     external: true
 
 services:
@@ -12,7 +12,7 @@ services:
     hostname: account-service-db
 
     networks:
-      - microservices
+      - account-service
 
 #    ports:
 #      - 3307:3306
