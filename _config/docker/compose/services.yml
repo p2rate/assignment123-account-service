@@ -1,0 +1,26 @@
+version: '3'
+
+networks:
+  account-service:
+    external: true
+
+services:
+
+  account-service-db:
+    image: mariadb:latest
+    container_name: account-service-db
+    hostname: account-service-db
+
+    networks:
+      - account-service
+
+#    ports:
+#      - 3307:3306
+
+    volumes:
+      - "../volumes/mysql:/var/lib/mysql"
+
+    env_file:
+      - "../env/development.env"
+
+
