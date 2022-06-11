@@ -14,8 +14,8 @@ services:
     networks:
       - account-service
 
-   ports:
-     - 3307:3306
+    ports:
+      - 3307:3306
 
     volumes:
       - "../volumes/mysql:/var/lib/mysql"
